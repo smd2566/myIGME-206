@@ -30,15 +30,15 @@ namespace FavoriteColorAndNumber
             string sNumber;
 
 
-
+            //Asks the user for their favorite color and writes it
             Console.Write("Enter your favorite color: \t");
-
             color = Console.ReadLine();
 
+            //Asks the user for their favorite number and converts it
             Console.Write("Enter your favorite number: \t");
-
             sNumber = Console.ReadLine();
 
+            //Crashes the program if the user enters a string instead of an int
             favnum = Convert.ToInt32(sNumber);
 
 
