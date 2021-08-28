@@ -12,6 +12,9 @@ namespace Doherty_HelloWorld_2
     //Restrictions / Known Errors: None
     class Program
     {
+        //Author: Shane Doherty
+        //Purpose: Main - To run through a series of WriteLine commands that prints out the text "Hello World!" and "Shane Doherty" to the user
+        //Restrictions / Known Errors: None
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
