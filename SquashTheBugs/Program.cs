@@ -18,7 +18,11 @@ namespace SquashTheBugs
             // declare int counter
             //Compile Time Error. Added semicolon to fix
             //int i = 0
-            int i = 0;
+            //int i = 0;
+            //Logical Error: The integer needs to  be changed to a float variable so the answer is more precise.
+            float i = 0;
+            
+            
 
             string allNumbers = null;
 
@@ -40,7 +44,7 @@ namespace SquashTheBugs
 
                 if (i != 1)
                 {
-                    Console.WriteLine(i / (i - 1));
+                    Console.WriteLine((i / (i - 1)));
                 } else
                 {
                     Console.WriteLine("null: Cannot divide by 0");
