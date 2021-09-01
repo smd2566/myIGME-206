@@ -27,7 +27,8 @@ namespace SquashTheBugs
             string allNumbers = null;
 
             // loop through the numbers 1 through 10
-            for (i = 1; i < 10; ++i)
+            //Logical error: i only goes to 9, but it should go to 10. Increased max index to 11.
+            for (i = 1; i < 11; ++i)
             {
                 // declare string to hold all numbers
                 //Logical Error: This should be declared outside of the for loop
