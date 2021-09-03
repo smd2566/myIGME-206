@@ -12,9 +12,12 @@ namespace PE3
         //Purpose: Main: To find the product of 4 numbers entered by the user
         //Restrictions: None
         static void Main(string[] args)
+
+            
         {
             double dProduct = 1;
             double dStoredNumber = 0;
+            bool bValid = true;
 
 
             //Purpose: Asks the user for an input and checks if the input is a valid number, stops the program otherwise.
@@ -22,7 +25,7 @@ namespace PE3
             {
                 Console.WriteLine("Please enter an integer" + "(" + (i + 1)
                     + ")");
-
+                bValid = true;
                 string input = Console.ReadLine();
                 try
                 {
@@ -32,13 +35,15 @@ namespace PE3
                     
                     Console.WriteLine("Incorrect format: Only enter a NUMBER");
                     --i;
-                    break;
+                    bValid = false;
+                    
                     
                 }
-                
+                if (bValid == true)
+                {
                     dProduct = dProduct * dStoredNumber;
-                
- 
+                }
+         
             }
             
             Console.WriteLine("The product of these values is " + dProduct);
