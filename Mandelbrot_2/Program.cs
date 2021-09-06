@@ -30,41 +30,35 @@ namespace Mandelbrot
 
             double dLowerLimitX = 0;
             double dUpperLimitX = 0;
-            double dIncX = 0;
+            
 
             double dLowerLimitY = 0;
             double dUpperLimitY = 0;
-            double dIncY = 0;
+            
 
             
 
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 4; i++)
             {
                 if (i == 0)
                 {
-                    Console.WriteLine("Please enter an integer for the lower limit of X");
+                    Console.WriteLine("Please enter an integer for the lower limit of X (default is 1.2)");
                 }
                 if (i == 1)
                 {
-                    Console.WriteLine("Please enter an integer for the upper limit of X");
+                    Console.WriteLine("Please enter an integer for the upper limit of X (default is -1.2)");
                 }
+                
                 if (i == 2)
                 {
-                    Console.WriteLine("Please enter an integer for the incremementer of X (The default is 0.05)");
+                    Console.WriteLine("Please enter an integer for the lower limit of Y (default is -0.6)");
                 }
                 if (i == 3)
                 {
-                    Console.WriteLine("Please enter an integer for the lower limit of Y");
+                    Console.WriteLine("Please enter an integer for the upper limit of Y (default is 1.77)");
                 }
-                if (i == 4)
-                {
-                    Console.WriteLine("Please enter an integer for the upper limit of Y");
-                }
-                if (i == 5)
-                {
-                    Console.WriteLine("Please enter an integer for the incrementer of Y (The default is .03)");
-                }
+                
 
                 bValid = true;
                 string input = Console.ReadLine();
@@ -97,16 +91,13 @@ namespace Mandelbrot
                             i--;
                         }
                     }
+                    
                     if (i == 2)
-                    {
-                        dIncX = dStoredNumber;
-                    }
-                    if (i == 3)
                     {
                         dLowerLimitY = dStoredNumber;
                         
                     }
-                    if (i == 4)
+                    if (i == 3)
                     {
                         dUpperLimitY = dStoredNumber;
                         if (dUpperLimitY < dLowerLimitY)
@@ -116,11 +107,7 @@ namespace Mandelbrot
                         }
 
                     }
-                    if (i == 5)
-                    {
-                        dIncY = dStoredNumber;
-
-                    }
+                    
 
                 }
 
@@ -138,9 +125,9 @@ namespace Mandelbrot
 
 
 
-            for (imagCoord = dLowerLimitX; imagCoord >= dUpperLimitX; imagCoord -= dIncX)
+            for (imagCoord = dLowerLimitX; imagCoord >= dUpperLimitX; imagCoord -= ((dLowerLimitX - dUpperLimitX) /48))
             {
-                for (realCoord = dLowerLimitY; realCoord <= dUpperLimitY; realCoord += dIncY)
+                for (realCoord = dLowerLimitY; realCoord <= dUpperLimitY; realCoord += ((dUpperLimitY - dLowerLimitY) /80))
                 {
                     iterations = 0;
                     realTemp = realCoord;
