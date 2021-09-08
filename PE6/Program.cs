@@ -8,6 +8,10 @@ namespace PE6
 {
     class Program
     {
+
+        //Author: Shane Doherty
+        //Purpose: To ask the user for a number in order to guess a randomly generated number. If the user guesses the number, the game is won.
+        //Restrictions: None
         static void Main(string[] args)
         {
             bool bValid = true;
