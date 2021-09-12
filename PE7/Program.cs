@@ -7,13 +7,20 @@ using System;
 
 namespace Madlibs
 {
+    //Author: Shane Doherty
+    //Purpose: Program - To simulate a game of Mad Libs with a user
+    //Restrictions: None
     class Program
     {
+        //Author: Shane Doherty
+        //Purpose: Main - Asks the user whether they want to play. Asks for a number of the Mad Libs they want to play. Asks the user for  various words to replace. Prints the final result of the game.
+        //Restrictions: None
         static void Main(string[] args)
         {
             int numLibs = 0;
             int cntr = 0;
             int nChoice = 0;
+            int nTestChoice = 0;
 
             StreamReader input;
 
@@ -78,7 +85,7 @@ namespace Madlibs
                 string userChoice = Console.ReadLine();
                 try
                 {
-                    nChoice = Convert.ToInt32(userChoice);
+                    nTestChoice = Convert.ToInt32(userChoice);
                 }
                 catch
                 {
@@ -86,10 +93,15 @@ namespace Madlibs
                     Console.WriteLine("Incorrect format: Only enter a NUMBER");
                     --i;
 
-
-
+                }
+                if (!(nTestChoice > 1 && nTestChoice < 5))
+                {
+                    Console.WriteLine("The number has to be greater than 1 but lower than 5.");
+                    --i;
                 }
             }
+
+            nChoice = nTestChoice;
 
                 // split the Mad Lib into separate words
                 string[] words = madLibs[nChoice].Split(' ');
