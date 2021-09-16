@@ -20,7 +20,9 @@ class Program
     {
         Console.WriteLine();
         Console.WriteLine("Your time is up! Press enter");
+        timeOutTimer.Stop();
         bTimeOut = true;
+        
     }
     //Author: David Schuh / Shane Doherty
     //Purpose: Main: Asks the user for their name, question number and difficulty. Displays questions in a given time limit, and displays results at the end
@@ -199,7 +201,8 @@ class Program
                 timeOutTimer.Start();
                 
                 sResponse = Console.ReadLine();
-                timeOutTimer.Stop();
+                
+                
                 try
                 {
                     nResponse = int.Parse(sResponse);
