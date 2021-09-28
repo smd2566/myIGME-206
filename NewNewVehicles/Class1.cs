@@ -20,7 +20,7 @@ namespace Vehicles
 
     public interface PassengerCarrier
     {
-        public void LoadPassenger() { }
+        void LoadPassenger();
     }
 
     public interface HeavyLoadCarrier
