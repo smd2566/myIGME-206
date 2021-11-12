@@ -327,14 +327,7 @@ namespace Dont_Die_Part_1
                         }
                     }
 
-
-
-
-
-
-                    // put the answers in random order
-                    // prefix each answer with number 1-4 so the player only need to type the number
-                    // 15 second timer
+                    
                 }
             }
             Console.WriteLine("You have died");
