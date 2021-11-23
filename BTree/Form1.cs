@@ -172,12 +172,11 @@ namespace BTree
             VisualizeBinaryTree visualizeBinaryTree = new VisualizeBinaryTree(root);
         }
 
+
+        //-----------------------------------------------------------EXAM 3 STUFF ----------------------------------------------------------
         private void Button5_Click(object sender, EventArgs e)
         {
-            // Exercise #2
-            // prime the tree for numbers between 1 and 51
-            // with 7 optimally distributed data points setting isData = false 
-            // then insert 30 random numbers between 1 and 51
+            // Reformatted for Exam 3
 
             Random random = new Random();
             this.richTextBox1.Clear();
@@ -185,71 +184,86 @@ namespace BTree
             BTree node = null;
             BTree root = null;
 
-            node = new BTree(28, root, false);
+            node = new BTree(1, root, false);
             root = node;
-            node = new BTree(14, root, false);
-            node = new BTree(42, root, false);
-            node = new BTree(35, root, false);
-            node = new BTree(7, root, false);
+            node = new BTree(5, root, false);
+            node = new BTree(15, root, false);
+            node = new BTree(20, root, false);
             node = new BTree(21, root, false);
-            node = new BTree(49, root, false);
+            node = new BTree(22, root, false);
+            node = new BTree(23, root, false);
+            node = new BTree(24, root, false);
+            node = new BTree(25, root, false);
+            node = new BTree(30, root, false);
+            node = new BTree(35, root, false);
+            node = new BTree(37, root, false);
+            node = new BTree(40, root, false);
+            node = new BTree(55, root, false);
+            node = new BTree(60, root, false);
 
 
 
-
-
-
-
-
-            node = new BTree(49, root, false);
-
-            for (int i = 0; i < 30; i++)
-            {
-                node = new BTree((random.Next(1, 51)), root);
-
-            }
 
             this.richTextBox1.Text += "\n";
             BTree.TraverseAscending(root);
 
             VisualizeBinaryTree visualizeBinaryTree = new VisualizeBinaryTree(root);
+
+            
         }
+        
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            // Exercise #3
-            // insert 15 random uppercase strings
-            
+            Random random = new Random();
             this.richTextBox1.Clear();
 
             BTree node = null;
             BTree root = null;
 
-            node = new BTree("Banana", root);
+            List<int> numberList = new List<int>();
+            numberList.Add(1); //0
+            numberList.Add(5); //1
+            numberList.Add(15);//2
+            numberList.Add(20);//3
+            numberList.Add(21);//4
+            numberList.Add(22);//5
+            numberList.Add(23);//6
+            numberList.Add(24);//7
+            numberList.Add(25);//8
+            numberList.Add(30);//9
+            numberList.Add(35);//10 
+            numberList.Add(37);//11
+            numberList.Add(40);//12
+            numberList.Add(55);//13
+            numberList.Add(60);//14
+
+            node = new BTree(numberList[7], root, false);
             root = node;
+            node = new BTree(numberList[3], root, false);
+            node = new BTree(numberList[11], root, false);
+            node = new BTree(numberList[1], root, false);
+            node = new BTree(numberList[5], root, false);
+            node = new BTree(numberList[9], root, false);
+            node = new BTree(numberList[13], root, false);
+            node = new BTree(numberList[0], root, false);
+            node = new BTree(numberList[2], root, false);
+            node = new BTree(numberList[4], root, false);
+            node = new BTree(numberList[6], root, false);
+            node = new BTree(numberList[8], root, false);
+            node = new BTree(numberList[10], root, false);
+            node = new BTree(numberList[12], root, false);
+            node = new BTree(numberList[14], root, false);
 
-            node = new BTree("Orange", root);
-            node = new BTree("Apple", root);
-            node = new BTree("Dragonfruit", root);
-            node = new BTree("Peach", root);
-            node = new BTree("Avocado", root);
-            node = new BTree("Watermelon", root);
-            node = new BTree("Durian", root);
-            node = new BTree("Kiwi", root);
-            node = new BTree("Cherry", root);
-            node = new BTree("Coconut", root);
-            node = new BTree("Lemon", root);
-            node = new BTree("Grapefruit", root);
-            node = new BTree("Tangerine", root);
-            node = new BTree("Pomegranite", root);
-
-
+            //24, 20, 37, 5, 22, 30, 55, 1, 15, 21, 23, 25, 35, 40, 60
 
             this.richTextBox1.Text += "\n";
             BTree.TraverseAscending(root);
 
             VisualizeBinaryTree visualizeBinaryTree = new VisualizeBinaryTree(root);
         }
+
+        //---------------------------------------------------------------------------------------------------------------------
 
         private void Button7_Click(object sender, EventArgs e)
         {

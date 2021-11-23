@@ -13,8 +13,22 @@ namespace Exam3Q2
     //Author: Shane Doherty
     //Purpose: To use a list graph and matrix graph to perform depdth first search and Djstrika shortest path algorithm
     //Restrictions: None
+
+
     class Program
     {
+
+        public class ColorNode
+        {
+            public string sColor;
+            public int nextCost;
+            public int prevCost;
+
+        }
+        
+
+
+
         //Matrix graph
 
         static int[,] mCGraph = new int[,]
@@ -106,7 +120,6 @@ namespace Exam3Q2
             }
 
             (int, int)[] colorList = listGraph[v];
-
             if (colorList != null)
             {
                 foreach ((int, int) neighbor in colorList)
@@ -283,6 +296,65 @@ namespace Exam3Q2
 
                 game[i].edges.Sort();
             }
+
+
+
+
+            //Linked list stuff
+            LinkedList<LinkedListNode<ColorNode>> linkedList = new LinkedList<LinkedListNode<ColorNode>>(); // Linked List implementation
+            
+            ColorNode redColorNode = new ColorNode();
+            ColorNode navyColorNode = new ColorNode();
+            ColorNode skyColorNode = new ColorNode();
+            ColorNode greyColorNode = new ColorNode();
+            ColorNode orangeColorNode = new ColorNode();
+            ColorNode purpleColorNode = new ColorNode();
+            ColorNode yellowColorNode = new ColorNode();
+            ColorNode greenColorNode = new ColorNode();
+
+
+            
+            redColorNode.sColor = "red";
+            navyColorNode.sColor = "navy";
+            skyColorNode.sColor = "sky";
+            greyColorNode.sColor = "grey";
+            orangeColorNode.sColor = "orange";
+            purpleColorNode.sColor = "purple";
+            yellowColorNode.sColor = "yellow";
+            greenColorNode.sColor = "green";
+
+
+            redColorNode.nextCost = 1;
+            redColorNode.prevCost = 5;
+
+            navyColorNode.nextCost = 8;
+            navyColorNode.prevCost = 1;
+
+            skyColorNode.nextCost = 1;
+            skyColorNode.prevCost = 0;
+
+            greyColorNode.nextCost = 1;
+            greyColorNode.prevCost = 0;
+
+            orangeColorNode.nextCost = 1;
+            orangeColorNode.prevCost = -1;
+
+            purpleColorNode.nextCost = 1;
+            purpleColorNode.prevCost = -1;
+
+            yellowColorNode.nextCost = 6;
+            yellowColorNode.prevCost = 1;
+
+
+
+            LinkedListNode<ColorNode> redLinkNode = new LinkedListNode<ColorNode>(redColorNode);
+            LinkedListNode<ColorNode> navyLinkNode = new LinkedListNode<ColorNode>(navyColorNode);
+            LinkedListNode<ColorNode> skyLinkNode = new LinkedListNode<ColorNode>(skyColorNode);
+            LinkedListNode<ColorNode> greyLinkNode = new LinkedListNode<ColorNode>(greyColorNode);
+            LinkedListNode<ColorNode> orangeLinkNode = new LinkedListNode<ColorNode>(orangeColorNode);
+            LinkedListNode<ColorNode> purpleLinkNode = new LinkedListNode<ColorNode>(purpleColorNode);
+            LinkedListNode<ColorNode> yellowLinkNode = new LinkedListNode<ColorNode>(yellowColorNode);
+            LinkedListNode<ColorNode> greenLinkNode = new LinkedListNode<ColorNode>(greenColorNode);
 
 
 
