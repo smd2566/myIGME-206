@@ -21,13 +21,25 @@ namespace Exam3Q2
         public class ColorNode
         {
 
-            public string sColor = null;
-            public int nextCost = -1;
-            public int prevCost = -1;
-            public LinkedListNode<ColorNode> link1 = null;
-            public int link1Cost = -1;
-            public LinkedListNode<ColorNode> link2 = null;
-            public int link2Cost = -1;
+            public string sColor;
+            public int nextCost;
+            public int prevCost;
+            public LinkedListNode<ColorNode> link1;
+            public int link1Cost;
+            public LinkedListNode<ColorNode> link2;
+            public int link2Cost;
+
+            public ColorNode(string sColor, int nextCost, int prevCost, LinkedListNode<ColorNode> link1, int link1Cost, LinkedListNode<ColorNode> link2, int link2Cost)
+            {
+                this.sColor = sColor;
+                this.nextCost = nextCost;
+                this.prevCost = prevCost;
+                this.link1 = link1;
+                this.link1Cost = link1Cost;
+                this.link2 = link2;
+                this.link2Cost = link2Cost;
+
+            }
 
         }
         
@@ -302,18 +314,19 @@ namespace Exam3Q2
 
             //Linked list stuff
             LinkedList<LinkedListNode<ColorNode>> linkedList = new LinkedList<LinkedListNode<ColorNode>>(); // Linked List implementation
-            
-            ColorNode redColorNode = new ColorNode();
-            ColorNode navyColorNode = new ColorNode();
-            ColorNode skyColorNode = new ColorNode();
-            ColorNode greyColorNode = new ColorNode();
-            ColorNode orangeColorNode = new ColorNode();
-            ColorNode purpleColorNode = new ColorNode();
-            ColorNode yellowColorNode = new ColorNode();
-            ColorNode greenColorNode = new ColorNode();
+            //public ColorNode(string sColor, int nextCost, int prevCost, LinkedListNode<ColorNode> link1, int link1Cost, LinkedListNode<ColorNode> link2, int link2Cost)
+
+            ColorNode redColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode navyColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode skyColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode greyColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode orangeColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode purpleColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode yellowColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
+            ColorNode greenColorNode = new ColorNode(null, -1, -1, null, -1, null, -1);
 
 
-            
+
             redColorNode.sColor = "red";
             navyColorNode.sColor = "navy";
             skyColorNode.sColor = "sky";
