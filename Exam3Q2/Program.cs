@@ -11,7 +11,7 @@ using System.IO;
 namespace Exam3Q2
 {
     //Author: Shane Doherty
-    //Purpose: To use a list graph and matrix graph to perform depdth first search and Djstrika shortest path algorithm
+    //Purpose: To use a list graph and matrix graph to perform depdth first search and Djstrika shortest path algorithm as well as linkedList functionality for the digraph
     //Restrictions: None
 
 
@@ -20,9 +20,14 @@ namespace Exam3Q2
 
         public class ColorNode
         {
-            public string sColor;
-            public int nextCost;
-            public int prevCost;
+
+            public string sColor = null;
+            public int nextCost = -1;
+            public int prevCost = -1;
+            public LinkedListNode<ColorNode> link1 = null;
+            public int link1Cost = -1;
+            public LinkedListNode<ColorNode> link2 = null;
+            public int link2Cost = -1;
 
         }
         
@@ -260,17 +265,12 @@ namespace Exam3Q2
 
 
         //Author: Shane Doherty
-        //Purpose Main - Calls the Depth First Search method starting from index 0, also calls Dijstra sort
+        //Purpose Main - Calls the Depth First Search method starting from index 0, also calls Dijstra sort and utilizes linkedList functionality
         //Restrictions: None
         static void Main(string[] args)
         {
             Random rand = new Random();
 
-            string sState;
-
-            int nUserState;
-
-            int nMoves = 0;
 
             Node node;
             int i = 0;
@@ -333,6 +333,8 @@ namespace Exam3Q2
             skyColorNode.nextCost = 1;
             skyColorNode.prevCost = 0;
 
+
+
             greyColorNode.nextCost = 1;
             greyColorNode.prevCost = 0;
 
@@ -355,6 +357,31 @@ namespace Exam3Q2
             LinkedListNode<ColorNode> purpleLinkNode = new LinkedListNode<ColorNode>(purpleColorNode);
             LinkedListNode<ColorNode> yellowLinkNode = new LinkedListNode<ColorNode>(yellowColorNode);
             LinkedListNode<ColorNode> greenLinkNode = new LinkedListNode<ColorNode>(greenColorNode);
+
+            skyColorNode.link1 = navyLinkNode;
+            skyColorNode.link1Cost = 1;
+            skyColorNode.link2 = greyLinkNode;
+            skyColorNode.link2Cost = 0;
+
+   
+            navyColorNode.link1 = skyLinkNode;
+            navyColorNode.link1Cost = 1;
+
+            greyColorNode.link1 = skyLinkNode;
+            greyColorNode.link1Cost = 0;
+
+
+            linkedList.AddLast(redLinkNode);
+            linkedList.AddLast(navyLinkNode);
+            linkedList.AddLast(skyLinkNode);
+            linkedList.AddLast(greyLinkNode);
+            linkedList.AddLast(orangeLinkNode);
+            linkedList.AddLast(purpleLinkNode);
+            linkedList.AddLast(yellowLinkNode);
+            linkedList.AddLast(greenLinkNode);
+            
+
+
 
 
 
