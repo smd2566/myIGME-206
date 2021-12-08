@@ -50,7 +50,7 @@ namespace Exam3Q1
             string sUserInput = null;
             string sReturnString = null;
 
-            bool isPalindrome = false;
+            //bool isPalindrome = false;
             Console.WriteLine("Please enter a string");
             sUserInput = Console.ReadLine();
 
@@ -189,21 +189,21 @@ namespace Exam3Q1
 
 
 
-            for (int i = sUserInput.Length; i > 0; i--)
-            {
-                sReturnString += sUserInput[i - 1];
-            }
+            //for (int i = sUserInput.Length; i > 0; i--)
+            //{
+            //    sReturnString += sUserInput[i - 1];
+            //}
 
-            for (int i = characters.Length; i > 0; i--)
-            {
-                reversedCharacters += characters[i - 1];
-            }
+            //for (int i = characters.Length; i > 0; i--)
+            //{
+            //    reversedCharacters += characters[i - 1];
+            //}
 
             
-            if (characters.ToLower() == reversedCharacters.ToLower())
-            {
-                isPalindrome = true;
-            }
+            //if (characters.ToLower() == reversedCharacters.ToLower())
+            //{
+                //isPalindrome = true;
+            //}
 
 
             Console.WriteLine("Number of A/a: " + numA);
@@ -233,10 +233,10 @@ namespace Exam3Q1
             Console.WriteLine("Number of Y/y: " + numY);
             Console.WriteLine("Number of Z/z: " + numZ);
             Console.WriteLine("--------------");
-            Console.WriteLine("Reversed string: ");
-            Console.WriteLine(sReturnString);
-            Console.WriteLine("--------------");
-            Console.WriteLine("Is palindrome: " + isPalindrome);
+            //Console.WriteLine("Reversed string: ");
+            //Console.WriteLine(sReturnString);
+            //Console.WriteLine("--------------");
+            //Console.WriteLine("Is palindrome: " + isPalindrome);
 
 
 
