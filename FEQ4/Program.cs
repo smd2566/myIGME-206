@@ -62,6 +62,7 @@ namespace FEQ4
             singleton.level = 10;
             singleton.hp = 10;
             singleton.inventory = new string[] { "Wood", "Steel" };
+            singleton.liscenseKey = "DFGU99-1454";
 
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("D:\\PlayerInformation.txt", FileMode.Create, FileAccess.Write);
